@@ -30,16 +30,8 @@ public class CameraController : MonoBehaviour
 
         transform.LookAt(target);
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Debug.Log("Freeview");
-            target.rotation = Quaternion.Euler(mouseY, mouseX, 0);
-        }
-        else 
-        {
-            target.rotation = Quaternion.Euler(mouseY, mouseX, 0);
-            player.rotation = Quaternion.Euler(0, mouseX, 0);
-        }
+        target.rotation = Quaternion.Euler(mouseY, mouseX, 0);
+        player.rotation = Quaternion.Euler(0, mouseX, 0);
         
     }
 }
