@@ -7,8 +7,8 @@ public class PlayerController : MonoBehaviourPun
 {
     CharacterController playerController;
 
-    public float speed = 2.0f;
-    public float accelaration = 8.0f;
+    public float speed = 1.0f;
+    public float accelaration = 2.0f;
     public float gravity = -9.0f;
     Vector3 velocity;
     public Animator anim;
