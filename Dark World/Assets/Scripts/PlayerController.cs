@@ -30,47 +30,43 @@ public class PlayerController : MonoBehaviourPun
 
             // diagonal movement check
 
-            // if(Input.GetKey (KeyCode.W) && Input.GetKey (KeyCode.A))
-            // {
-            //     velocity *= 0f;
-            //     anim.SetFloat("Movement", 0.5f, 0.1f, Time.deltaTime); 
-            //     anim.SetInteger("Strafe", 0);
-            // }
+            if(Input.GetKey (KeyCode.W) && Input.GetKey (KeyCode.A))
+            {
+                anim.SetFloat("Movement", 0.3f, 0.1f, Time.deltaTime);
+                velocity *= speed;
+            }
 
-            // else if(Input.GetKey (KeyCode.W) && Input.GetKey (KeyCode.D))
-            // {
-            //     velocity *= 0f;
-            //     anim.SetFloat("Movement", 0.5f, 0.1f, Time.deltaTime); 
-            //     anim.SetInteger("Strafe", 0);
-            // }
+            else if(Input.GetKey (KeyCode.W) && Input.GetKey (KeyCode.D))
+            {
+                anim.SetFloat("Movement", 0.3f, 0.1f, Time.deltaTime);
+                velocity *= speed;
+            }
 
-            // else if(Input.GetKey (KeyCode.W) && Input.GetKey (KeyCode.S))
-            // {
-            //     velocity *= 0f;
-            //     anim.SetFloat("Movement", 0.5f, 0.1f, Time.deltaTime); 
-            //     anim.SetInteger("Strafe", 0);
-            // }
+            else if(Input.GetKey (KeyCode.W) && Input.GetKey (KeyCode.S))
+            {
+                velocity *= 0f;
+                anim.SetFloat("Movement", 0.5f, 0.1f, Time.deltaTime); 
+                anim.SetInteger("Strafe", 0);
+            }
 
-            // else if(Input.GetKey (KeyCode.S) && Input.GetKey (KeyCode.A))
-            // {
-            //     velocity *= 0f;
-            //     anim.SetFloat("Movement", 0.5f, 0.1f, Time.deltaTime); 
-            //     anim.SetInteger("Strafe", 0);
-            // }
+            else if(Input.GetKey (KeyCode.S) && Input.GetKey (KeyCode.A))
+            {
+                anim.SetFloat("Movement", 1f, 0.1f, Time.deltaTime);
+                velocity *= speed;
+            }
 
-            // else if(Input.GetKey (KeyCode.S) && Input.GetKey (KeyCode.D))
-            // {
-            //     velocity *= 0f;
-            //     anim.SetFloat("Movement", 0.5f, 0.1f, Time.deltaTime); 
-            //     anim.SetInteger("Strafe", 0);
-            // }
+            else if(Input.GetKey (KeyCode.S) && Input.GetKey (KeyCode.D))
+            {
+                anim.SetFloat("Movement", 1f, 0.1f, Time.deltaTime);
+                velocity *= speed;
+            }
 
-            // else if(Input.GetKey (KeyCode.A) && Input.GetKey (KeyCode.D))
-            // {
-            //     velocity *= 0f;
-            //     anim.SetFloat("Movement", 0.5f, 0.1f, Time.deltaTime); 
-            //     anim.SetInteger("Strafe", 0);
-            // }
+            else if(Input.GetKey (KeyCode.A) && Input.GetKey (KeyCode.D))
+            {
+                velocity *= 0f;
+                // anim.SetFloat("Movement", 0.5f, 0.1f, Time.deltaTime); 
+                // anim.SetInteger("Strafe", 0);
+            }
 
 
             // sprinting
