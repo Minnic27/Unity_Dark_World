@@ -8,7 +8,9 @@ public class GunFire : MonoBehaviour
     public float range = 100f;
 
     public float fireRate = 15f;
-    public GameObject bulletPrefab;
+    
+    public ParticleSystem muzzleFlash;
+    public GameObject impactEffect;
 
     public Camera tpsCam;
     
@@ -26,6 +28,7 @@ public class GunFire : MonoBehaviour
 
     void Shoot()
     {
+        muzzleFlash.Play();
         RaycastHit hit;
         
         if(Physics.Raycast(tpsCam.transform.position, tpsCam.transform.forward, out hit, range))
@@ -39,7 +42,7 @@ public class GunFire : MonoBehaviour
             target.TakeDamage(damage);
         }
 
-        GameObject bulletImpact = Instantiate(bulletPrefab, hit.point, Quaternion.LookRotation(hit.normal));
+        GameObject bulletImpact = Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
         Destroy(bulletImpact, 0.5f);
     }
 
