@@ -98934,6 +98934,10 @@ PrefabInstance:
       propertyPath: ShapeModule.radius.value
       value: 0.03
       objectReference: {fileID: 0}
+    - target: {fileID: 5974520924281125188, guid: dd0e6b4f38dc8214991307ac68093f3a, type: 3}
+      propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.scalar
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 5974520924281125190, guid: dd0e6b4f38dc8214991307ac68093f3a, type: 3}
       propertyPath: m_RootOrder
       value: 0
