@@ -8,8 +8,8 @@ public class EnemyBehavior : MonoBehaviour
     [SerializeField]
     private int health = 5;
 
-    public NavMeshAgent enemy;
-    public Transform player;
+    // public NavMeshAgent enemy;
+    // public Transform player;
 
 
     public void TakeDamage(int damageAmount)
@@ -28,13 +28,13 @@ public class EnemyBehavior : MonoBehaviour
         Destroy(gameObject);
     }
 
-    private void FollowPlayer()
-    {
-        enemy.SetDestination(player.position);
-    }
+    // private void FollowPlayer()
+    // {
+    //     enemy.SetDestination(player.position);
+    // }
 
-    void Update()
-    {
-        FollowPlayer();
-    }
+    // void Update()
+    // {
+    //     FollowPlayer();
+    // }
 }
