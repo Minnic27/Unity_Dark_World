@@ -6392,10 +6392,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 124978329}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9757bb5c6839cd5448b2772c70175c53, type: 3}
+  m_Script: {fileID: 11500000, guid: ac479f642343f304a9cf825dd81bd638, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
+  damage: 10
   range: 100
   fireRate: 15
   muzzleFlash: {fileID: 1637167903}
@@ -36899,7 +36899,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2b34113b2278bc4895d53ef6b17075e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 7657738551998408346, guid: 3109bad363182bf4388fb99f5b760c47, type: 3}
+  enemy: {fileID: 6867244164181141621, guid: 3109bad363182bf4388fb99f5b760c47, type: 3}
   spawnPoint: {fileID: 816169766}
 --- !u!1001 &817927540
 PrefabInstance:
@@ -100598,6 +100598,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5974520924281125188, guid: dd0e6b4f38dc8214991307ac68093f3a, type: 3}
       propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5974520924281125188, guid: dd0e6b4f38dc8214991307ac68093f3a, type: 3}
+      propertyPath: playOnAwake
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5974520924281125188, guid: dd0e6b4f38dc8214991307ac68093f3a, type: 3}

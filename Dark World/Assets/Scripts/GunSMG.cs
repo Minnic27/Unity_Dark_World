@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GunFire : MonoBehaviour
+public class GunSMG : MonoBehaviour
 {
-    public int damage = 1;
+    public int damage = 10;
     public float range = 100f;
 
     public float fireRate = 15f;
@@ -45,5 +45,4 @@ public class GunFire : MonoBehaviour
         GameObject bulletImpact = Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
         Destroy(bulletImpact, 0.5f);
     }
-
 }
