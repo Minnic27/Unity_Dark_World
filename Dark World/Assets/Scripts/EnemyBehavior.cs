@@ -1,11 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
-public class EnemyHealth : MonoBehaviour
+public class EnemyBehavior : MonoBehaviour
 {
     [SerializeField]
     private int health = 5;
+
+    public NavMeshAgent enemy;
+    public Transform player;
 
 
     public void TakeDamage(int damageAmount)
@@ -22,5 +26,15 @@ public class EnemyHealth : MonoBehaviour
     private void EnemyDie()
     {
         Destroy(gameObject);
+    }
+
+    private void FollowPlayer()
+    {
+        enemy.SetDestination(player.position);
+    }
+
+    void Update()
+    {
+        FollowPlayer();
     }
 }

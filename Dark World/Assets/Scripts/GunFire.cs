@@ -36,7 +36,7 @@ public class GunFire : MonoBehaviour
             Debug.Log(hit.transform.name);
         }
 
-        EnemyHealth target = hit.transform.GetComponent<EnemyHealth>();
+        EnemyBehavior target = hit.transform.GetComponent<EnemyBehavior>();
         if(target != null)
         {
             target.TakeDamage(damage);

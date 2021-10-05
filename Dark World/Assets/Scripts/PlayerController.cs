@@ -13,6 +13,9 @@ public class PlayerController : MonoBehaviourPun
     Vector3 velocity;
     public Animator anim;
 
+    public GameObject flashlight;
+    private bool isIlluminated;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -108,6 +111,20 @@ public class PlayerController : MonoBehaviourPun
             {
                 anim.SetFloat("Movement", 0.67f, 0.1f, Time.deltaTime); 
                 anim.SetInteger("Strafe", 0);
+            }
+
+            if(Input.GetKeyDown(KeyCode.F))
+            {
+                if(isIlluminated)
+                {
+                    isIlluminated = false;
+                    flashlight.SetActive(false);
+                }
+                else
+                {
+                    isIlluminated = true;
+                    flashlight.SetActive(true);
+                }
             }
         }
 
