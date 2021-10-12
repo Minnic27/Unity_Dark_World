@@ -37,6 +37,7 @@ public class PlayerController : MonoBehaviourPun
             {
                 anim.SetFloat("Movement", 0.3f, 0.1f, Time.deltaTime);
                 velocity *= speed;
+                
             }
 
             else if(Input.GetKey (KeyCode.W) && Input.GetKey (KeyCode.D))
@@ -126,6 +127,7 @@ public class PlayerController : MonoBehaviourPun
                     flashlight.SetActive(true);
                 }
             }
+           
         }
 
         velocity.y += gravity * Time.deltaTime;
