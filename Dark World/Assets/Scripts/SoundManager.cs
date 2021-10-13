@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
-    public static AudioClip smgFire, sgFire, pistolFire, arFire;
+    public static AudioClip smgFire, sgFire, pistolFire, arFire, lightOn, lightOff;
     [SerializeField] AudioClip[] footsteps;
     public static AudioSource audioSrc;
     
@@ -17,6 +17,9 @@ public class SoundManager : MonoBehaviour
         sgFire = Resources.Load<AudioClip>("Shotgun");
         pistolFire = Resources.Load<AudioClip>("Deagle");
         arFire = Resources.Load<AudioClip>("AR(1)");
+        lightOn = Resources.Load<AudioClip>("FlashlightOn");
+        lightOff = Resources.Load<AudioClip>("FlashlightOff");
+
 
         audioSrc = GetComponent<AudioSource>();
     }
@@ -36,6 +39,12 @@ public class SoundManager : MonoBehaviour
                 break;
             case "AR(1)":
                 audioSrc.PlayOneShot(arFire);
+                break;
+            case "FlashlightOn":
+                audioSrc.PlayOneShot(lightOn);
+                break;
+            case "FlashlightOff":
+                audioSrc.PlayOneShot(lightOff);
                 break;
         }
     }

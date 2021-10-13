@@ -131,11 +131,13 @@ public class PlayerController : MonoBehaviourPun
             {
                 if(isIlluminated)
                 {
+                    SoundManager.PlaySound("FlashlightOff");
                     isIlluminated = false;
                     flashlight.SetActive(false);
                 }
                 else
                 {
+                    SoundManager.PlaySound("FlashlightOn");
                     isIlluminated = true;
                     flashlight.SetActive(true);
                 }
