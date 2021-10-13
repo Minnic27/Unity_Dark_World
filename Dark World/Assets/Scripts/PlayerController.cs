@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviourPun
 
     private float walkSpeed = 0.7f;
     private float acceleration = 4.5f;
-    private float gravity = -100.0f;
+    private float gravity = -1000.0f;
     Vector3 velocity;
     public Animator anim;
     public SoundManager soundScript;

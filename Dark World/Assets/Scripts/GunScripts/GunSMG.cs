@@ -5,9 +5,9 @@ using UnityEngine;
 public class GunSMG : MonoBehaviour
 {
     public int damage = 10;
-    public float range = 100f;
+    private float range = 100f;
 
-    public float fireRate = 15f;
+    private float fireRate = 15f;
     
     public ParticleSystem muzzleFlash;
     public GameObject impactEffect;

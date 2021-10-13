@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class GunAR : MonoBehaviour
 {
-    public int damage = 10;
-    public float range = 100f;
+    public int damage = 15;
+    private float range = 100f;
 
-    public float fireRate = 15f;
+    private float fireRate = 7f;
+
+    // Firerate: 15 smg, 7 ar, 2 pistol, 0.9 sg
     
     public ParticleSystem muzzleFlash;
     public GameObject impactEffect;
