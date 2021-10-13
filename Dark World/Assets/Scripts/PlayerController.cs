@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviourPun
     private float gravity = -100.0f;
     Vector3 velocity;
     public Animator anim;
+    public SoundManager soundScript;
 
     public GameObject flashlight;
     private bool isIlluminated;
@@ -95,6 +96,7 @@ public class PlayerController : MonoBehaviourPun
 
             else if (Input.GetKey(KeyCode.W)) 
             {
+                //soundScript.FootStep();
                 anim.SetFloat("Movement", 0.3f, 0.1f, Time.deltaTime);
                 velocity *= walkSpeed;
             }
