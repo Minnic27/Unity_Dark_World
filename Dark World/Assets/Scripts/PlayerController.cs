@@ -7,14 +7,15 @@ public class PlayerController : MonoBehaviourPun
 {
     CharacterController playerController;
 
-    public float speed = 1.0f;
-    public float accelaration = 2.0f;
-    public float gravity = -9.0f;
+    private float walkSpeed = 0.7f;
+    private float acceleration = 4.5f;
+    private float gravity = -100.0f;
     Vector3 velocity;
     public Animator anim;
 
     public GameObject flashlight;
     private bool isIlluminated;
+    public bool isRunning = false;
 
     // Start is called before the first frame update
     void Start()
@@ -36,49 +37,57 @@ public class PlayerController : MonoBehaviourPun
             if(Input.GetKey (KeyCode.W) && Input.GetKey (KeyCode.A))
             {
                 anim.SetFloat("Movement", 0.3f, 0.1f, Time.deltaTime);
-                velocity *= speed;
-                
+                velocity *= walkSpeed;
             }
 
             else if(Input.GetKey (KeyCode.W) && Input.GetKey (KeyCode.D))
             {
                 anim.SetFloat("Movement", 0.3f, 0.1f, Time.deltaTime);
-                velocity *= speed;
+                velocity *= walkSpeed;
             }
 
             else if(Input.GetKey (KeyCode.W) && Input.GetKey (KeyCode.S))
             {
-                velocity *= 0f;
-                anim.SetFloat("Movement", 0.5f, 0.1f, Time.deltaTime); 
+                anim.SetFloat("Movement", 0.67f, 0.1f, Time.deltaTime);
                 anim.SetInteger("Strafe", 0);
+                velocity *= 0f; 
             }
 
             else if(Input.GetKey (KeyCode.S) && Input.GetKey (KeyCode.A))
             {
                 anim.SetFloat("Movement", 1f, 0.1f, Time.deltaTime);
-                velocity *= speed;
+                velocity *= walkSpeed;
             }
 
             else if(Input.GetKey (KeyCode.S) && Input.GetKey (KeyCode.D))
             {
                 anim.SetFloat("Movement", 1f, 0.1f, Time.deltaTime);
-                velocity *= speed;
+                velocity *= walkSpeed;
             }
 
             else if(Input.GetKey (KeyCode.A) && Input.GetKey (KeyCode.D))
             {
+                anim.SetFloat("Movement", 0.67f, 0.1f, Time.deltaTime);
+                anim.SetInteger("Strafe", 0);
                 velocity *= 0f;
-                // anim.SetFloat("Movement", 0.5f, 0.1f, Time.deltaTime); 
-                // anim.SetInteger("Strafe", 0);
             }
-
 
             // sprinting
 
-            if ((Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.W))) 
+            else if ((Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.W))) 
             {
+                // turn off shooting
+                isRunning = true;
                 anim.SetFloat("Movement", 0f, 0.1f, Time.deltaTime);
-                velocity *= accelaration;
+                anim.SetInteger("Strafe", 0);
+                velocity *= acceleration;   
+            }
+
+
+            else if(Input.GetKeyUp(KeyCode.LeftShift))
+            {
+                // turn on shooting
+                isRunning = false;
             }
 
 
@@ -87,33 +96,35 @@ public class PlayerController : MonoBehaviourPun
             else if (Input.GetKey(KeyCode.W)) 
             {
                 anim.SetFloat("Movement", 0.3f, 0.1f, Time.deltaTime);
-                velocity *= speed;
+                velocity *= walkSpeed;
             }
 
             else if (Input.GetKey(KeyCode.A)) 
             {
                 anim.SetInteger("Strafe", -1);
-                velocity *= speed;
+                velocity *= walkSpeed;
             }
 
             else if (Input.GetKey(KeyCode.S)) 
             {
                 anim.SetFloat("Movement", 1f, 0.1f, Time.deltaTime);
-                velocity *= speed;
+                velocity *= walkSpeed;
             }
 
             else if (Input.GetKey(KeyCode.D)) 
             {
                 anim.SetInteger("Strafe", 1);
-                velocity *= speed;
+                velocity *= walkSpeed;
             }
 
             else // to idle animation
             {
                 anim.SetFloat("Movement", 0.67f, 0.1f, Time.deltaTime); 
                 anim.SetInteger("Strafe", 0);
+                velocity *= 0f;
             }
 
+            // toggle flashlight
             if(Input.GetKeyDown(KeyCode.F))
             {
                 if(isIlluminated)
@@ -127,7 +138,6 @@ public class PlayerController : MonoBehaviourPun
                     flashlight.SetActive(true);
                 }
             }
-           
         }
 
         velocity.y += gravity * Time.deltaTime;

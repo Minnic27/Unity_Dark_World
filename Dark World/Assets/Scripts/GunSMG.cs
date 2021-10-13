@@ -15,6 +15,7 @@ public class GunSMG : MonoBehaviour
     public Camera tpsCam;
     
     private float nextTimeToFire = 0f;
+    public PlayerController playerScript;
 
     // Update is called once per frame
     void Update()
@@ -22,7 +23,13 @@ public class GunSMG : MonoBehaviour
         if(Input.GetButton("Fire1") && Time.time >= nextTimeToFire)
         {
             nextTimeToFire = Time.time + 1f/fireRate;
-            Shoot();
+            
+            if(!playerScript.isRunning)
+            {
+                Shoot();
+            }
+            
+            
         }
     }
 
