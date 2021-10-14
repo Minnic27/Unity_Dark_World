@@ -7,7 +7,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Kyrilios_Kyrilios_StrafeRight
+  m_Name: Bezalel_Bezalel_StrafeRight
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -21,7 +21,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: e64d4de99cbd22f438d32ad7cf61e356, type: 2}
+  m_Motion: {fileID: 7400000, guid: d6e51bdcd5c113b42ac9cb230aeebd26, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -181,7 +181,7 @@ AnimatorStateMachine:
     m_Position: {x: -120, y: 340, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -7935440887207596790}
-    m_Position: {x: 150, y: 330, z: 0}
+    m_Position: {x: 160, y: 340, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -201,7 +201,7 @@ BlendTree:
   m_Name: Blend Tree
   m_Childs:
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: 6fe22b5ecb8692d45baa547fbbafc5e8, type: 2}
+    m_Motion: {fileID: 7400000, guid: dd53590759409d74d85fd3998fccf66f, type: 2}
     m_Threshold: 0
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
@@ -209,7 +209,7 @@ BlendTree:
     m_DirectBlendParameter: Movement
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: 4233e8287e737924f956481789ac93e7, type: 2}
+    m_Motion: {fileID: 7400000, guid: 152ecb0a792f0694ab893f52dfc94ee7, type: 2}
     m_Threshold: 0.33333334
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
@@ -217,7 +217,7 @@ BlendTree:
     m_DirectBlendParameter: Movement
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: dd7d69bdf122293458c5b7579791b51b, type: 2}
+    m_Motion: {fileID: 7400000, guid: 109e257ad0c0a9e49b76cc71e6925140, type: 2}
     m_Threshold: 0.6666667
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
@@ -225,7 +225,7 @@ BlendTree:
     m_DirectBlendParameter: Movement
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: a51398ef2ab540b4a94fae2504a62914, type: 2}
+    m_Motion: {fileID: 7400000, guid: 042208d2527dc8b49a3aa0d3ca1ba3d7, type: 2}
     m_Threshold: 1
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
@@ -271,7 +271,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Kyrilios_Kyrilios_StrafeLeft
+  m_Name: Bezalel_Bezalel_StrafeLeft
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -285,7 +285,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 9c2a69396782e7a4fb826b6f22c9676a, type: 2}
+  m_Motion: {fileID: 7400000, guid: a50b46d5ea718534b8237fa001726095, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

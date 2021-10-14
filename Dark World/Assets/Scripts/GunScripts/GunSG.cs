@@ -7,7 +7,7 @@ public class GunSG : MonoBehaviour
     public int damage = 50;
     private float range = 100f;
 
-    private float fireRate = 0.9f;
+    private float fireRate = 0.78f;
     
     public ParticleSystem muzzleFlash;
     public GameObject impactEffect;
