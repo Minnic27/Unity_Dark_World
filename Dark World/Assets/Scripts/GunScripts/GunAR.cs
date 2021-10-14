@@ -7,7 +7,7 @@ public class GunAR : MonoBehaviour
     public int damage = 15;
     private float range = 100f;
 
-    private float fireRate = 7f;
+    private float fireRate = 6f;
 
     // Firerate: 15 smg, 7 ar, 2 pistol, 0.9 sg
     
@@ -38,7 +38,7 @@ public class GunAR : MonoBehaviour
     void Shoot()
     {
         muzzleFlash.Play();
-        SoundManager.PlaySound("AR(1)");
+        SoundManager.PlaySound("AR1");
         RaycastHit hit;
         
         if(Physics.Raycast(tpsCam.transform.position, tpsCam.transform.forward, out hit, range))

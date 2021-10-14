@@ -16,7 +16,7 @@ public class SoundManager : MonoBehaviour
         smgFire = Resources.Load<AudioClip>("SMG");
         sgFire = Resources.Load<AudioClip>("Shotgun");
         pistolFire = Resources.Load<AudioClip>("Deagle");
-        arFire = Resources.Load<AudioClip>("AR(1)");
+        arFire = Resources.Load<AudioClip>("AR1");
         lightOn = Resources.Load<AudioClip>("FlashlightOn");
         lightOff = Resources.Load<AudioClip>("FlashlightOff");
 
@@ -37,7 +37,7 @@ public class SoundManager : MonoBehaviour
             case "Deagle":
                 audioSrc.PlayOneShot(pistolFire);
                 break;
-            case "AR(1)":
+            case "AR1":
                 audioSrc.PlayOneShot(arFire);
                 break;
             case "FlashlightOn":
