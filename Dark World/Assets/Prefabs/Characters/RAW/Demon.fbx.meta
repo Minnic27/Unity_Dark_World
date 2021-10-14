@@ -1,0 +1,213 @@
+fileFormatVersion: 2
+guid: 26e5b63fc525af1458dc4bd42ffce061
+ModelImporter:
+  serializedVersion: 20200
+  internalIDToNameTable:
+  - first:
+      74: -912005202631113558
+    second: Armature.003|Bezalel_Idle
+  - first:
+      74: -2255467569170871291
+    second: Armature.003|Bezalel_Running
+  - first:
+      74: 283042512626853832
+    second: Armature.003|Bezalel_StandingReload
+  - first:
+      74: -397268028302317476
+    second: Armature.003|Bezalel_StrafeLeft
+  - first:
+      74: 6374473380765944997
+    second: Armature.003|Bezalel_StrafeRight
+  - first:
+      74: -5861826700495864226
+    second: Armature.003|Bezalel_Walk
+  - first:
+      74: -4604054812721618806
+    second: Armature.003|Bezalel_WalkBackwards
+  - first:
+      74: 6289647427988347246
+    second: Armature.003|Bezalel_WalkingReload
+  - first:
+      74: -3672120964243188446
+    second: Armature.003|Dom_Idle
+  - first:
+      74: 639123457037382998
+    second: Armature.003|Dom_Running
+  - first:
+      74: 7903218755311243059
+    second: Armature.003|Dom_StandingReload
+  - first:
+      74: 9180033616081378406
+    second: Armature.003|Dom_StrafeLeft
+  - first:
+      74: 6658414623528282545
+    second: Armature.003|Dom_StrafeRight
+  - first:
+      74: -832581523263854549
+    second: Armature.003|Dom_Walk
+  - first:
+      74: -8413671468675273512
+    second: Armature.003|Dom_WalkBackwards
+  - first:
+      74: 3068178560086090273
+    second: Armature.003|Dom_WalkingReload
+  - first:
+      74: -2270793017135288049
+    second: Armature.003|Enemy_Attack1
+  - first:
+      74: -7827190877564600879
+    second: Armature.003|Enemy_Attack2
+  - first:
+      74: 8433050064543612792
+    second: Armature.003|Enemy_Death
+  - first:
+      74: 6591915056749882071
+    second: Armature.003|Enemy_Run
+  - first:
+      74: -5413098780388979498
+    second: Armature.003|Krung_Idle
+  - first:
+      74: -6752612604380984745
+    second: Armature.003|Krung_Running
+  - first:
+      74: 4551278538238074740
+    second: Armature.003|Krung_StandingReload
+  - first:
+      74: -5176693530256946879
+    second: Armature.003|Krung_StrafeLeft
+  - first:
+      74: 8249560225690090264
+    second: Armature.003|Krung_StrafeRight
+  - first:
+      74: 59251511991545869
+    second: Armature.003|Krung_Walk
+  - first:
+      74: 8559969077950558912
+    second: Armature.003|Krung_WalkBackwards
+  - first:
+      74: 8168664443137976984
+    second: Armature.003|Krung_WalkingReload
+  - first:
+      74: -2269866757188990124
+    second: Armature.003|Kyrilios_Idle
+  - first:
+      74: -404511229728154474
+    second: Armature.003|Kyrilios_Running
+  - first:
+      74: 4641328494154971252
+    second: Armature.003|Kyrilios_StandingReload
+  - first:
+      74: -285756315134976482
+    second: Armature.003|Kyrilios_StrafeLeft
+  - first:
+      74: 5228437384280709260
+    second: Armature.003|Kyrilios_StrafeRight
+  - first:
+      74: -6928869251157901432
+    second: Armature.003|Kyrilios_Walk
+  - first:
+      74: -7889410048679371854
+    second: Armature.003|Kyrilios_WalkBackwards
+  - first:
+      74: 6995920707154476180
+    second: Armature.003|Kyrilios_WalkingReload
+  - first:
+      74: 4391255963293812859
+    second: Armature.003|Player_Death
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
