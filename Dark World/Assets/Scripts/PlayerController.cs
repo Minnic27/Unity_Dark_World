@@ -96,7 +96,6 @@ public class PlayerController : MonoBehaviourPun
 
             else if (Input.GetKey(KeyCode.W)) 
             {
-                //soundScript.FootStep();
                 anim.SetFloat("Movement", 0.3f, 0.1f, Time.deltaTime);
                 velocity *= walkSpeed;
             }

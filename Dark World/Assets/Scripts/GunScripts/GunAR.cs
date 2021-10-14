@@ -8,8 +8,6 @@ public class GunAR : MonoBehaviour
     private float range = 100f;
 
     private float fireRate = 6f;
-
-    // Firerate: 15 smg, 7 ar, 2 pistol, 0.9 sg
     
     public ParticleSystem muzzleFlash;
     public GameObject impactEffect;

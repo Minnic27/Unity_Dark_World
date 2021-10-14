@@ -5,21 +5,17 @@ using UnityEngine;
 public class SoundManager : MonoBehaviour
 {
     public static AudioClip smgFire, sgFire, pistolFire, arFire, lightOn, lightOff;
-    [SerializeField] AudioClip[] footsteps;
     public static AudioSource audioSrc;
     
     // Start is called before the first frame update
     void Start()
     {
-        int footstepIndex = Random.Range(0, footsteps.Length);
-
         smgFire = Resources.Load<AudioClip>("SMG");
         sgFire = Resources.Load<AudioClip>("Shotgun");
         pistolFire = Resources.Load<AudioClip>("Deagle");
         arFire = Resources.Load<AudioClip>("AR1");
         lightOn = Resources.Load<AudioClip>("FlashlightOn");
         lightOff = Resources.Load<AudioClip>("FlashlightOff");
-
 
         audioSrc = GetComponent<AudioSource>();
     }
@@ -47,17 +43,5 @@ public class SoundManager : MonoBehaviour
                 audioSrc.PlayOneShot(lightOff);
                 break;
         }
-    }
-
-    public void FootStep()
-    {
-        AudioClip clip = GetRandomSFX();
-        audioSrc.PlayOneShot(clip);
-    }
-
-    public AudioClip GetRandomSFX()
-    {
-        int index = Random.Range(0, footsteps.Length - 1);
-        return footsteps[index];
     }
 }
