@@ -20,6 +20,7 @@ public class CameraController : MonoBehaviour
     void LateUpdate()
     {
         CamMovement();
+        ToggleMouse();
     }
 
     void CamMovement()
@@ -32,5 +33,19 @@ public class CameraController : MonoBehaviour
 
         target.rotation = Quaternion.Euler(mouseY, mouseX, 0);
         player.rotation = Quaternion.Euler(0, mouseX, 0);
+    }
+
+    void ToggleMouse()
+    {
+        if(Input.GetKeyDown(KeyCode.LeftAlt))
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.Confined;
+        } 
+        else if (Input.GetKeyUp(KeyCode.LeftAlt))
+        {
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+        }
     }
 }
