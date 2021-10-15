@@ -6,6 +6,7 @@ public class EnemyFollow : MonoBehaviour
 {
     public NavMeshAgent enemy;
     public Transform Player;
+    public Animator anim;
 
     void Start()
     {

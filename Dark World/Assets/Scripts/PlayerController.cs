@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviourPun
             
         // }
 
-        velocity = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+            velocity = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
             velocity = transform.TransformDirection(velocity);
 
             // diagonal movement check

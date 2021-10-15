@@ -5,11 +5,11 @@ using UnityEngine.AI;
 
 public class EnemyBehavior : MonoBehaviour
 {
-    [SerializeField]
-    private int health = 5;
-
-    // public NavMeshAgent enemy;
-    // public Transform player;
+    private int health = 100;
+    public NavMeshAgent enemy;
+    public Transform player;
+    public Animator anim;
+    private bool isAlive;
 
 
     public void TakeDamage(int damageAmount)
@@ -19,22 +19,29 @@ public class EnemyBehavior : MonoBehaviour
 
         if(health <= 0)
         {
-            EnemyDie();
+            isAlive = false;
+            StartCoroutine(EnemyDie());
         }
     }
 
-    private void EnemyDie()
+    IEnumerator EnemyDie()
     {
+        anim.SetTrigger("Death");
+        yield return new WaitForSeconds(4f);
         Destroy(gameObject);
     }
 
-    // private void FollowPlayer()
-    // {
-    //     enemy.SetDestination(player.position);
-    // }
+    private void FollowPlayer()
+    {
+        if(isAlive)
+        {
+            enemy.SetDestination(player.position);
+        }
+        
+    }
 
-    // void Update()
-    // {
-    //     FollowPlayer();
-    // }
+    void Update()
+    {
+        FollowPlayer();   
+    }
 }
