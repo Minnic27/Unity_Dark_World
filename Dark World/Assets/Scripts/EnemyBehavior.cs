@@ -9,38 +9,49 @@ public class EnemyBehavior : MonoBehaviour
     public NavMeshAgent enemy;
     public Transform player;
     public Animator anim;
-    private bool isAlive;
+    private float stoppingDistance = 2.3f;
 
 
     public void TakeDamage(int damageAmount)
     {
         health -= damageAmount;
-
-        if(health <= 0)
-        {
-            isAlive = false;
-            StartCoroutine(EnemyDie());
-        }
     }
 
     IEnumerator EnemyDie()
     {
         anim.SetTrigger("Death");
+        enemy.isStopped = true;
         yield return new WaitForSeconds(4f);
         Destroy(gameObject);
     }
 
     private void FollowPlayer()
     {
-        if(isAlive)
+        float distance = Vector3.Distance(transform.position, player.position);
+
+        if(distance < stoppingDistance)
         {
+            enemy.isStopped = true;
+            //anim.SetInteger("Attack", 1);
+        }
+        else
+        {
+            enemy.isStopped = false;
+            //anim.SetInteger("Attack", -1);
             enemy.SetDestination(player.position);
         }
+
+        
         
     }
 
     void Update()
     {
-        FollowPlayer();   
+        FollowPlayer();
+
+        if(health <= 0)
+        {
+            StartCoroutine(EnemyDie());
+        }
     }
 }
