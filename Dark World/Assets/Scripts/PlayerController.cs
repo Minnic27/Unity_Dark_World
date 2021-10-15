@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviourPun
     private float gravity = -1000.0f;
     Vector3 velocity;
     public Animator anim;
-    public SoundManager soundScript;
+    private SoundManager soundScript;
 
     public GameObject flashlight;
     private bool isIlluminated;
@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviourPun
     // Start is called before the first frame update
     void Start()
     {
+        soundScript = GameObject.FindObjectOfType<SoundManager>();
         playerController = GetComponent<CharacterController>();
         anim = GetComponent<Animator>();
     }
