@@ -1,0 +1,216 @@
+fileFormatVersion: 2
+guid: d1fa44715b5f2ed40bf71cea14218481
+ModelImporter:
+  serializedVersion: 20200
+  internalIDToNameTable:
+  - first:
+      74: 4037556280693189381
+    second: Greater Demon|Bezalel_Idle
+  - first:
+      74: -5182082749203898828
+    second: Greater Demon|Bezalel_Running
+  - first:
+      74: 9044692935963489688
+    second: Greater Demon|Bezalel_StandingReload
+  - first:
+      74: 2375435651199298385
+    second: Greater Demon|Bezalel_StrafeLeft
+  - first:
+      74: -4373263778209944140
+    second: Greater Demon|Bezalel_StrafeRight
+  - first:
+      74: 6528063944509707514
+    second: Greater Demon|Bezalel_Walk
+  - first:
+      74: 8264365791533630688
+    second: Greater Demon|Bezalel_WalkBackwards
+  - first:
+      74: -6045557909945095304
+    second: Greater Demon|Bezalel_WalkingReload
+  - first:
+      74: 7859916376162038598
+    second: Greater Demon|Dom_Idle
+  - first:
+      74: -6951856259550845379
+    second: Greater Demon|Dom_Running
+  - first:
+      74: -5179835816216476636
+    second: Greater Demon|Dom_StandingReload
+  - first:
+      74: 633835406996661082
+    second: Greater Demon|Dom_StrafeLeft
+  - first:
+      74: 5918552677434123788
+    second: Greater Demon|Dom_StrafeRight
+  - first:
+      74: -4394455136345657103
+    second: Greater Demon|Dom_Walk
+  - first:
+      74: 8979137944451162030
+    second: Greater Demon|Dom_WalkBackwards
+  - first:
+      74: 671338587779259800
+    second: Greater Demon|Dom_WalkingReload
+  - first:
+      74: 3603700699711214135
+    second: Greater Demon|Enemy_Attack1
+  - first:
+      74: 6644325049119191456
+    second: Greater Demon|Enemy_Attack2
+  - first:
+      74: -6359131487136762737
+    second: Greater Demon|Enemy_Death
+  - first:
+      74: -5435279011496733026
+    second: Greater Demon|Enemy_Run
+  - first:
+      74: -1950536120617670231
+    second: Greater Demon|Enemy_Walk
+  - first:
+      74: -773617701784132154
+    second: Greater Demon|Krung_Idle
+  - first:
+      74: -8922523760747704158
+    second: Greater Demon|Krung_Running
+  - first:
+      74: 5646293642155097087
+    second: Greater Demon|Krung_StandingReload
+  - first:
+      74: 2174944102753258052
+    second: Greater Demon|Krung_StrafeLeft
+  - first:
+      74: 963321897272376575
+    second: Greater Demon|Krung_StrafeRight
+  - first:
+      74: 962240368895369201
+    second: Greater Demon|Krung_Walk
+  - first:
+      74: 3230319965828426574
+    second: Greater Demon|Krung_WalkBackwards
+  - first:
+      74: 4533804747135326542
+    second: Greater Demon|Krung_WalkingReload
+  - first:
+      74: -8310697830515145062
+    second: Greater Demon|Kyrilios_Idle
+  - first:
+      74: -4874445616800199543
+    second: Greater Demon|Kyrilios_Running
+  - first:
+      74: 2180678204727130030
+    second: Greater Demon|Kyrilios_StandingReload
+  - first:
+      74: 3690156084882774534
+    second: Greater Demon|Kyrilios_StrafeLeft
+  - first:
+      74: -3503497991093615498
+    second: Greater Demon|Kyrilios_StrafeRight
+  - first:
+      74: 7673200907447054440
+    second: Greater Demon|Kyrilios_Walk
+  - first:
+      74: -8826500436515203367
+    second: Greater Demon|Kyrilios_WalkBackwards
+  - first:
+      74: -3405364421291888009
+    second: Greater Demon|Kyrilios_WalkingReload
+  - first:
+      74: 2818646052937122114
+    second: Greater Demon|Player_Death
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
