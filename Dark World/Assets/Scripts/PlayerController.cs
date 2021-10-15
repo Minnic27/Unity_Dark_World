@@ -23,15 +23,17 @@ public class PlayerController : MonoBehaviourPun
     {
         soundScript = GameObject.FindObjectOfType<SoundManager>();
         playerController = GetComponent<CharacterController>();
-        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(photonView.IsMine) {
+        // if(photonView.IsMine) {
 
-            velocity = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+            
+        // }
+
+        velocity = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
             velocity = transform.TransformDirection(velocity);
 
             // diagonal movement check
@@ -142,7 +144,6 @@ public class PlayerController : MonoBehaviourPun
                     flashlight.SetActive(true);
                 }
             }
-        }
 
         velocity.y += gravity * Time.deltaTime;
         playerController.Move(velocity * Time.deltaTime);
