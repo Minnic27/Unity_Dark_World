@@ -20,9 +20,11 @@ public class PlayerController : MonoBehaviourPun
     public bool isRunning = false;
 
     PhotonView PV;
+    Rigidbody rb;
 
     void Awake()
     {
+        rb = GetComponent<Rigidbody>();
         PV = GetComponent<PhotonView>();
     }
 
@@ -167,5 +169,10 @@ public class PlayerController : MonoBehaviourPun
 
         velocity.y += gravity * Time.deltaTime;
         playerController.Move(velocity * Time.deltaTime);
+    }
+
+    void FixedUpdate()
+    {
+        rb.MovePosition(rb.position + transform.TransformDirection(velocity) * Time.fixedDeltaTime);
     }
 }
