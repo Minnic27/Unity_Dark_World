@@ -7,6 +7,7 @@ using System.IO;
 public class PlayerManager : MonoBehaviour
 {
     PhotonView PV;
+    public Transform spawnPoint;
 
     void Awake()
     {
@@ -23,7 +24,6 @@ public class PlayerManager : MonoBehaviour
 
     void CreateController()
     {
-        Debug.Log("Instantiated Player");
-        PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "Bezalel"), Vector3.zero, Quaternion.identity);
+        PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "Bezalel"), spawnPoint.position, Quaternion.identity);
     }
 }
