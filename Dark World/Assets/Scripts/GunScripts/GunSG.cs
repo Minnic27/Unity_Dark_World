@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class GunSG : MonoBehaviour
 {
@@ -20,6 +21,13 @@ public class GunSG : MonoBehaviour
     private GameUI uiScript;
 
 
+    PhotonView PV;
+
+    void Awake()
+    {
+        PV = GetComponent<PhotonView>();
+    }
+
     void Start()
     {
         uiScript = GameObject.FindObjectOfType<GameUI>();
@@ -29,6 +37,9 @@ public class GunSG : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(!PV.IsMine)
+            return;
+
         if(Input.GetButtonDown("Fire1") && Time.time >= nextTimeToFire)
         {
             nextTimeToFire = Time.time + 1f/fireRate;

@@ -167,8 +167,11 @@ public class PlayerController : MonoBehaviourPun
                 }
             }
 
-        velocity.y += gravity * Time.deltaTime;
-        playerController.Move(velocity * Time.deltaTime);
+            velocity.y += gravity * Time.deltaTime;
+            playerController.Move(velocity * Time.deltaTime);
+        
+
+      
     }
 
     void FixedUpdate()
