@@ -37,7 +37,7 @@ public class GunAR : MonoBehaviour
             {
                 if(ammo <= 0)
                 {
-                    Debug.Log("Out of Ammo");
+                    uiScript.ammoUI.text = "Press 'R' to reload";
                 }
                 else
                 {
@@ -82,7 +82,6 @@ public class GunAR : MonoBehaviour
         if ((Input.GetKey(KeyCode.R)) && (ammo == 0)) // checks if gun is out of ammo
         {
             ammo = 20;
-            Debug.Log("Gun reloaded!");
             uiScript.ammoUI.text = "Ammo: " + ammo;
         }
     }

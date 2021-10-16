@@ -12,13 +12,13 @@ public class EnemyBehavior : MonoBehaviour
     private float stoppingDistance = 1.8f;
     private bool isAttacking = false;
 
-    //private GameUI uiScript;
+    private GameUI uiScript;
     public GameObject rightFist;
 
     void Start()
     {
         player = GameObject.FindWithTag("Player").transform;
-        //uiScript = GameObject.FindObjectOfType<GameUI>();
+        uiScript = GameObject.FindObjectOfType<GameUI>();
     }
 
     public void ActivateAttack()
@@ -37,11 +37,13 @@ public class EnemyBehavior : MonoBehaviour
         health -= damageAmount;
     }
 
-    IEnumerator EnemyDie()
+    public IEnumerator EnemyDie()
     {
         enemy.isStopped = true;
         yield return new WaitForSeconds(4f);
+        uiScript.enemiesOnField--;
         Destroy(gameObject);
+        
     }
 
     private void FollowPlayer()

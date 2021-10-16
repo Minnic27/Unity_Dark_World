@@ -7,25 +7,31 @@ public class SpawnEnemy : MonoBehaviour
     public Rigidbody enemy;
     public Transform spawnPoint;
 
-    private int enemySpawned;
+    private GameUI uiScript;
+    private EnemyBehavior enemyScript;
+
     private int spawnTime;
 
 
     void Start()
     {
+        uiScript = GameObject.FindObjectOfType<GameUI>();
+        enemyScript = GameObject.FindObjectOfType<EnemyBehavior>();
+
         spawnTime = Random.Range(3, 5);
-        StartCoroutine(SpawntoLocation());
+        StartCoroutine(SpawnToLocation());
     }
 
 
-    IEnumerator SpawntoLocation()
+    IEnumerator SpawnToLocation()
     {
-        while (enemySpawned < 1)
+        while (uiScript.enemiesOnField < uiScript.maxEnemyNumber)
         {
             yield return new WaitForSeconds(spawnTime);
             Instantiate(enemy, spawnPoint.position, spawnPoint.rotation);
-            enemySpawned++;
+            uiScript.enemiesOnField++;
         }
         
     }
+
 }
