@@ -19,12 +19,24 @@ public class PlayerController : MonoBehaviourPun
     private bool isIlluminated;
     public bool isRunning = false;
 
+    PhotonView PV;
+
+    void Awake()
+    {
+        PV = GetComponent<PhotonView>();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
         uiScript = GameObject.FindObjectOfType<GameUI>();
         soundScript = GameObject.FindObjectOfType<SoundManager>();
         playerController = GetComponent<CharacterController>();
+
+        if(!PV.IsMine)
+        {
+            Destroy(GetComponentInChildren<Camera>().gameObject);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -38,10 +50,8 @@ public class PlayerController : MonoBehaviourPun
     // Update is called once per frame
     void Update()
     {
-        // if(photonView.IsMine) {
-
-            
-        // }
+        if(!PV.IsMine)
+            return;
 
             velocity = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
             velocity = transform.TransformDirection(velocity);
