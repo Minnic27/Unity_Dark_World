@@ -7,9 +7,29 @@ public class EnemyBehavior : MonoBehaviour
 {
     private int health = 100;
     public NavMeshAgent enemy;
-    public Transform player;
+    private Transform player;
     public Animator anim;
-    private float stoppingDistance = 2.3f;
+    private float stoppingDistance = 1.8f;
+    private bool isAttacking = false;
+
+    //private GameUI uiScript;
+    public GameObject rightFist;
+
+    void Start()
+    {
+        player = GameObject.FindWithTag("Player").transform;
+        //uiScript = GameObject.FindObjectOfType<GameUI>();
+    }
+
+    public void ActivateAttack()
+    {
+        rightFist.GetComponent<Collider>().enabled = true;
+    }
+
+    public void DeactivateAttack()
+    {
+        rightFist.GetComponent<Collider>().enabled = false;
+    }
 
 
     public void TakeDamage(int damageAmount)
@@ -19,7 +39,6 @@ public class EnemyBehavior : MonoBehaviour
 
     IEnumerator EnemyDie()
     {
-        anim.SetTrigger("Death");
         enemy.isStopped = true;
         yield return new WaitForSeconds(4f);
         Destroy(gameObject);
@@ -31,13 +50,15 @@ public class EnemyBehavior : MonoBehaviour
 
         if(distance < stoppingDistance)
         {
+            isAttacking = true;
             enemy.isStopped = true;
-            //anim.SetInteger("Attack", 1);
+            anim.SetInteger("Attack", 1);
         }
         else
         {
+            isAttacking = false;
             enemy.isStopped = false;
-            //anim.SetInteger("Attack", -1);
+            anim.SetInteger("Attack", -1);
             enemy.SetDestination(player.position);
         }
 
@@ -51,6 +72,12 @@ public class EnemyBehavior : MonoBehaviour
 
         if(health <= 0)
         {
+            anim.SetTrigger("Death");
+            StartCoroutine(EnemyDie());
+        }
+        else if(isAttacking && (health <= 0))
+        {
+            anim.SetTrigger("AttackDeath");
             StartCoroutine(EnemyDie());
         }
     }

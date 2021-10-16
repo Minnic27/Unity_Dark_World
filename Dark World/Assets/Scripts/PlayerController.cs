@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviourPun
     Vector3 velocity;
     public Animator anim;
     private SoundManager soundScript;
+    private GameUI uiScript;
 
     public GameObject flashlight;
     private bool isIlluminated;
@@ -21,8 +22,17 @@ public class PlayerController : MonoBehaviourPun
     // Start is called before the first frame update
     void Start()
     {
+        uiScript = GameObject.FindObjectOfType<GameUI>();
         soundScript = GameObject.FindObjectOfType<SoundManager>();
         playerController = GetComponent<CharacterController>();
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "Punch")
+        {
+            uiScript.DecreaseHealth();
+        }
     }
 
     // Update is called once per frame

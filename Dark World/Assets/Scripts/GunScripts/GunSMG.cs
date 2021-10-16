@@ -6,6 +6,7 @@ public class GunSMG : MonoBehaviour
 {
     public int damage = 10;
     private float range = 100f;
+    public int ammo = 50;
 
     private float fireRate = 15f;
     
@@ -16,6 +17,14 @@ public class GunSMG : MonoBehaviour
     
     private float nextTimeToFire = 0f;
     public PlayerController playerScript;
+    private GameUI uiScript;
+
+
+    void Start()
+    {
+        uiScript = GameObject.FindObjectOfType<GameUI>();
+        uiScript.ammoUI.text = "Ammo: " + ammo;
+    }
 
     // Update is called once per frame
     void Update()
@@ -26,11 +35,19 @@ public class GunSMG : MonoBehaviour
             
             if(!playerScript.isRunning)
             {
-                Shoot();
+                if(ammo <= 0)
+                {
+                    Debug.Log("Out of Ammo");
+                }
+                else
+                {
+                    Shoot();
+                }
+                
             }
-            
-            
         }
+
+        GunReload();
     }
 
     void Shoot()
@@ -52,5 +69,17 @@ public class GunSMG : MonoBehaviour
 
         GameObject bulletImpact = Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
         Destroy(bulletImpact, 0.5f);
+        ammo--;
+        uiScript.ammoUI.text = "Ammo: " + ammo;
+    }
+
+    public void GunReload()
+    {
+        if ((Input.GetKey(KeyCode.R)) && (ammo == 0)) // checks if gun is out of ammo
+        {
+            ammo = 50;
+            Debug.Log("Gun reloaded!");
+            uiScript.ammoUI.text = "Ammo: " + ammo;
+        }
     }
 }

@@ -696,7 +696,7 @@ GameObject:
   - component: {fileID: 4109391127642507761}
   m_Layer: 0
   m_Name: Dom
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -750,13 +750,13 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 3.46
-  m_Radius: 0.6
+  m_Height: 3.13
+  m_Radius: 0.85
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0.12, y: 1.79, z: 0.03}
+  m_Center: {x: 0.12, y: 2.12, z: 0.19}
 --- !u!114 &4109391127642507762
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -770,7 +770,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 7254314994123901232}
-  soundScript: {fileID: 0}
   flashlight: {fileID: 8563792221309447163}
   isRunning: 0
 --- !u!114 &4109391127642507761
@@ -2033,7 +2032,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8563792221309447163}
   m_LocalRotation: {x: -0.001350004, y: -0.063324794, z: 0.00008566078, w: 0.99799204}
-  m_LocalPosition: {x: 0.101, y: 3.491, z: 1.497}
+  m_LocalPosition: {x: 0.08, y: 3.15, z: 1.65}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 3624462951353045834}
@@ -2146,6 +2145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 15
+  ammo: 20
   muzzleFlash: {fileID: 2607989386215273201}
   impactEffect: {fileID: 5383390966512558474, guid: 822308c7e41813042be86ee5a1f0f3f8, type: 3}
   tpsCam: {fileID: 8563792222518935904}
@@ -2443,15 +2443,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5974520924060537073, guid: dd0e6b4f38dc8214991307ac68093f3a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.154
+      value: -0.07
       objectReference: {fileID: 0}
     - target: {fileID: 5974520924060537073, guid: dd0e6b4f38dc8214991307ac68093f3a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.403
+      value: 1.29
       objectReference: {fileID: 0}
     - target: {fileID: 5974520924060537073, guid: dd0e6b4f38dc8214991307ac68093f3a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.605
+      value: -1.31
       objectReference: {fileID: 0}
     - target: {fileID: 5974520924060537073, guid: dd0e6b4f38dc8214991307ac68093f3a, type: 3}
       propertyPath: m_LocalRotation.w

@@ -100,13 +100,13 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 3.5
-  m_Radius: 0.53
+  m_Height: 2.9
+  m_Radius: 0.68
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 1.65, z: 0.03}
+  m_Center: {x: 0, y: 2.07, z: 0.15}
 --- !u!114 &182004892833917868
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -120,7 +120,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 6858243379049933678}
-  soundScript: {fileID: 0}
   flashlight: {fileID: 8718666454337402631}
   isRunning: 0
 --- !u!114 &182004892833917869
@@ -2217,6 +2216,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
+  ammo: 50
   muzzleFlash: {fileID: 3032945455131095327}
   impactEffect: {fileID: 5383390966512558474, guid: 822308c7e41813042be86ee5a1f0f3f8, type: 3}
   tpsCam: {fileID: 8718666453480737312}

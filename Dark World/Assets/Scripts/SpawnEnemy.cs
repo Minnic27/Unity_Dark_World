@@ -20,7 +20,7 @@ public class SpawnEnemy : MonoBehaviour
 
     IEnumerator SpawntoLocation()
     {
-        while (enemySpawned < 5)
+        while (enemySpawned < 1)
         {
             yield return new WaitForSeconds(spawnTime);
             Instantiate(enemy, spawnPoint.position, spawnPoint.rotation);
