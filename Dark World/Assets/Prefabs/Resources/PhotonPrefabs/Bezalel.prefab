@@ -1646,9 +1646,9 @@ MonoBehaviour:
   ObservedComponentsFoldoutOpen: 1
   Group: 0
   prefixField: -1
-  Synchronization: 3
+  Synchronization: 1
   OwnershipTransfer: 0
-  observableSearch: 2
+  observableSearch: 0
   ObservedComponents:
   - {fileID: 6794413093606276902}
   sceneViewId: 0
@@ -2276,6 +2276,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 50
+  ammo: 6
   muzzleFlash: {fileID: 3420789060956448528}
   impactEffect: {fileID: 5383390966512558474, guid: 822308c7e41813042be86ee5a1f0f3f8, type: 3}
   tpsCam: {fileID: 9047967664028565434}
