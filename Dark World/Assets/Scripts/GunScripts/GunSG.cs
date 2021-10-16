@@ -69,12 +69,12 @@ public class GunSG : MonoBehaviour
         if(Physics.Raycast(tpsCam.transform.position, tpsCam.transform.forward, out hit, range))
         {
             Debug.Log(hit.transform.name);
-        }
 
-        EnemyBehavior target = hit.transform.GetComponent<EnemyBehavior>();
-        if(target != null)
-        {
-            target.TakeDamage(damage);
+            EnemyBehavior target = hit.transform.GetComponent<EnemyBehavior>();
+            if(target != null)
+            {
+                target.TakeDamage(damage);
+            }
         }
 
         GameObject bulletImpact = Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));

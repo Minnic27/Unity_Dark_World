@@ -14,11 +14,6 @@ public class GameUI : MonoBehaviour
     private string minutes;
     private string seconds;
     private string totalTime;
-
-    [HideInInspector]
-    public int enemiesOnField;
-    
-    public int maxEnemyNumber = 2;
     
     // Start is called before the first frame update
     void Start()

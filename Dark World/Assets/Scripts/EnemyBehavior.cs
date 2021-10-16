@@ -41,7 +41,6 @@ public class EnemyBehavior : MonoBehaviour
     {
         enemy.isStopped = true;
         yield return new WaitForSeconds(4f);
-        uiScript.enemiesOnField--;
         Destroy(gameObject);
         
     }
@@ -74,6 +73,7 @@ public class EnemyBehavior : MonoBehaviour
 
         if(health <= 0)
         {
+            anim.SetInteger("Attack", 0);
             anim.SetTrigger("Death");
             StartCoroutine(EnemyDie());
         }
