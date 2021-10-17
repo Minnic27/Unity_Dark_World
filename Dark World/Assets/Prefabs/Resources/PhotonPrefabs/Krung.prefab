@@ -2500,7 +2500,9 @@ MonoBehaviour:
   Synchronization: 3
   OwnershipTransfer: 0
   observableSearch: 2
-  ObservedComponents: []
+  ObservedComponents:
+  - {fileID: -1253948422303452193}
+  - {fileID: -7988527030397301337}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -2528,16 +2530,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5974520924060537078, guid: dd0e6b4f38dc8214991307ac68093f3a, type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5974520924060537078, guid: dd0e6b4f38dc8214991307ac68093f3a, type: 3}
       propertyPath: m_BoundingSphereOverride.x
-      value: 8.13e-43
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5974520924060537078, guid: dd0e6b4f38dc8214991307ac68093f3a, type: 3}
       propertyPath: m_BoundingSphereOverride.y
-      value: NaN
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5974520924060537078, guid: dd0e6b4f38dc8214991307ac68093f3a, type: 3}
       propertyPath: m_BoundingSphereOverride.z
-      value: 9e-44
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5974520924281125185, guid: dd0e6b4f38dc8214991307ac68093f3a, type: 3}
       propertyPath: m_Name
@@ -2603,7 +2609,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3262617620681854773, guid: dd0e6b4f38dc8214991307ac68093f3a, type: 3}
+    - {fileID: 1546925832087079893, guid: dd0e6b4f38dc8214991307ac68093f3a, type: 3}
+    - {fileID: 5549872267523742979, guid: dd0e6b4f38dc8214991307ac68093f3a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: dd0e6b4f38dc8214991307ac68093f3a, type: 3}
 --- !u!198 &4268397479589641521 stripped
 ParticleSystem:

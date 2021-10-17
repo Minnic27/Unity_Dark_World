@@ -11,6 +11,7 @@ public class PlayerManager : MonoBehaviour
 
     void Awake()
     {
+        spawnPoint = GameObject.FindWithTag("spawnpoint").transform;
         PV = GetComponent<PhotonView>();
     }
    
