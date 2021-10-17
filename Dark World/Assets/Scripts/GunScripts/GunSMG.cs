@@ -81,6 +81,7 @@ public class GunSMG : MonoBehaviour
         {
             ammo = 50;
             uiScript.ammoUI.text = "Ammo: " + ammo;
+            SoundManager.PlaySound("Reload");
         }
     }
 }

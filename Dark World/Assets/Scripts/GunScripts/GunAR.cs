@@ -79,6 +79,7 @@ public class GunAR : MonoBehaviour
         {
             ammo = 20;
             uiScript.ammoUI.text = "Ammo: " + ammo;
+            SoundManager.PlaySound("Reload");
         }
     }
 }

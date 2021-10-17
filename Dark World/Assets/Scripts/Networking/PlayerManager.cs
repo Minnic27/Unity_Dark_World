@@ -8,11 +8,13 @@ public class PlayerManager : MonoBehaviour
 {
     PhotonView PV;
     public Transform spawnPoint;
+    public string characterName;
 
     void Awake()
     {
         spawnPoint = GameObject.FindWithTag("spawnpoint").transform;
         PV = GetComponent<PhotonView>();
+        characterName = "Dom";
     }
    
     void Start()
@@ -25,6 +27,6 @@ public class PlayerManager : MonoBehaviour
 
     void CreateController()
     {
-        PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "Bezalel"), spawnPoint.position, Quaternion.identity);
+        PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", characterName), spawnPoint.position, Quaternion.identity);
     }
 }
