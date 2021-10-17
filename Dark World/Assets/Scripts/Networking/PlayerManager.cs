@@ -30,6 +30,6 @@ public class PlayerManager : MonoBehaviour
 
     void CreateController()
     {
-        PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "Kyrilios"), spawnPoint.position, Quaternion.identity);
+        PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "Dom"), spawnPoint.position, Quaternion.identity);
     }
 }
