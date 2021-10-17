@@ -35,6 +35,7 @@ public class GameUI : MonoBehaviour
             SoundManager.PlaySound("DeathGrunt");
             playerHealth = 0;
             healthUI.text = "Health: " + playerHealth + "%";
+            StartCoroutine(DeathSequence());
         }
     }
 
@@ -52,5 +53,12 @@ public class GameUI : MonoBehaviour
     void Update()
     {
         UpdateTime();
+    }
+
+    IEnumerator DeathSequence()
+    {
+        yield return new WaitForSeconds(2f);
+        Debug.Log("Player is DEAD!");
+        Time.timeScale = 0;
     }
 }
