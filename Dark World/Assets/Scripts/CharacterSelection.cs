@@ -7,12 +7,14 @@ public class CharacterSelection : MonoBehaviour
 {
     public GameObject[] characters;
     public int selectedCharacter = 0;
-    public string characterName;
+    
+    private PlayerManager pmScript;
 
 
     void Start()
     {
         Debug.Log(characters[selectedCharacter].name);
+        pmScript = GameObject.FindObjectOfType<PlayerManager>();
     }
 
     public void NextCharacter()
@@ -35,11 +37,11 @@ public class CharacterSelection : MonoBehaviour
         Debug.Log(characters[selectedCharacter].name);
     }
 
-    public void StartGame()
+    public void SelectCharacter()
     {
-        characterName = characters[selectedCharacter].name;
+        pmScript.characterName = characters[selectedCharacter].name;
         //PlayerPrefs.SetInt("selectedCharacter", selectedCharacter);
         //SceneManager.LoadScene("Neighborhood");
-        Debug.Log(characterName);
+        //Debug.Log(characterName);
     }
 }

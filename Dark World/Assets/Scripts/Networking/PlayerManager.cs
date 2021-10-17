@@ -14,7 +14,12 @@ public class PlayerManager : MonoBehaviour
     {
         spawnPoint = GameObject.FindWithTag("spawnpoint").transform;
         PV = GetComponent<PhotonView>();
-        characterName = "Dom";
+
+        if(characterName == "")
+        {
+            characterName = "Kyrilios";
+        }
+        
     }
    
     void Start()
