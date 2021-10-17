@@ -7,17 +7,21 @@ using System.IO;
 public class PlayerManager : MonoBehaviour
 {
     PhotonView PV;
-    public Transform spawnPoint;
+    public GameObject[] spawnPoints;
+    private int spawnIndex;
     
-    private CharacterSelection selectionScript;
+    public string characterName;
+    //private CharacterSelection selectionScript;
 
     void Awake()
     {
-        spawnPoint = GameObject.FindWithTag("spawnpoint").transform;
+        spawnPoints = GameObject.FindGameObjectsWithTag("spawnpoint");
         PV = GetComponent<PhotonView>();
 
-        selectionScript = GameObject.FindObjectOfType<CharacterSelection>();
-        
+        spawnIndex = Random.Range(0, spawnPoints.Length);
+        //selectionScript = GameObject.FindObjectOfType<CharacterSelection>();
+        //DontDestroyOnLoad(this.gameObject);
+        characterName = CharacterSelection.charName;
     }
    
     void Start()
@@ -30,6 +34,6 @@ public class PlayerManager : MonoBehaviour
 
     void CreateController()
     {
-        PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "Dom"), spawnPoint.position, Quaternion.identity);
+        PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", characterName), spawnPoints[spawnIndex].transform.position, Quaternion.identity);
     }
 }

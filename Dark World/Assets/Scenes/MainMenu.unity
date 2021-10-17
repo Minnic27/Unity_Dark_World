@@ -68624,8 +68624,7 @@ MonoBehaviour:
   - {fileID: 1286777583}
   - {fileID: 1886434346}
   - {fileID: 1130999167}
-  selectedCharacter: 0
-  characterName: 
+  pmScript: {fileID: -5897299187683596407, guid: 1ae71ea0dcf424d40bde90e382fec595, type: 3}
 --- !u!1001 &1378693752
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -87154,7 +87153,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1792261143}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1336286666}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        m_MethodName: QuitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1792261143
 MonoBehaviour:
   m_ObjectHideFlags: 0
