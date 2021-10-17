@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
-    public static AudioClip smgFire, sgFire, pistolFire, arFire, lightOn, lightOff, hitPlayer, enemyAttack, playerDead, enemyDead, reload;
+    public static AudioClip smgFire, sgFire, pistolFire, arFire, lightOn, lightOff, hitPlayer, enemyAttack, playerDead, reload;
     public static AudioSource audioSrc;
     
     // Start is called before the first frame update
@@ -19,7 +19,6 @@ public class SoundManager : MonoBehaviour
         hitPlayer = Resources.Load<AudioClip>("HitGrunt");
         enemyAttack = Resources.Load<AudioClip>("DemonAttack");
         playerDead = Resources.Load<AudioClip>("DeathGrunt");
-        enemyDead = Resources.Load<AudioClip>("MonsterDeath");
         reload = Resources.Load<AudioClip>("Reload");
 
         audioSrc = GetComponent<AudioSource>();
@@ -55,9 +54,6 @@ public class SoundManager : MonoBehaviour
                 break;
             case "DeathGrunt":
                 audioSrc.PlayOneShot(playerDead);
-                break;
-            case "MonsterDeath":
-                audioSrc.PlayOneShot(enemyDead);
                 break;
             case "Reload":
                 audioSrc.PlayOneShot(reload);
