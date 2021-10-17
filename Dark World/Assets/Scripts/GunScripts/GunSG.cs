@@ -62,9 +62,7 @@ public class GunSG : MonoBehaviour
 
     void Shoot()
     {
-        if(!PV.IsMine)
-            return;
-            
+               
         muzzleFlash.Play();
         SoundManager.PlaySound("Shotgun");
         RaycastHit hit;
