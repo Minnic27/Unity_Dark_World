@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
-    public static AudioClip smgFire, sgFire, pistolFire, arFire, lightOn, lightOff;
+    public static AudioClip smgFire, sgFire, pistolFire, arFire, lightOn, lightOff, hitPlayer, enemyAttack, playerDead, enemyDead, reload;
     public static AudioSource audioSrc;
     
     // Start is called before the first frame update
@@ -16,6 +16,11 @@ public class SoundManager : MonoBehaviour
         arFire = Resources.Load<AudioClip>("AR1");
         lightOn = Resources.Load<AudioClip>("FlashlightOn");
         lightOff = Resources.Load<AudioClip>("FlashlightOff");
+        hitPlayer = Resources.Load<AudioClip>("HitGrunt");
+        enemyAttack = Resources.Load<AudioClip>("DemonAttack");
+        playerDead = Resources.Load<AudioClip>("DeathGrunt");
+        //enemyDead = Resources.Load<AudioClip>("DemonAttack");
+        reload = Resources.Load<AudioClip>("Reload");
 
         audioSrc = GetComponent<AudioSource>();
     }
@@ -41,6 +46,21 @@ public class SoundManager : MonoBehaviour
                 break;
             case "FlashlightOff":
                 audioSrc.PlayOneShot(lightOff);
+                break;
+            case "HitGrunt":
+                audioSrc.PlayOneShot(hitPlayer);
+                break;
+            case "DemonAttack":
+                audioSrc.PlayOneShot(enemyAttack);
+                break;
+            case "DeathGrunt":
+                audioSrc.PlayOneShot(playerDead);
+                break;
+            // case "AR1":
+            //     audioSrc.PlayOneShot(enemyDead);
+            //     break;
+            case "Reload":
+                audioSrc.PlayOneShot(reload);
                 break;
         }
     }

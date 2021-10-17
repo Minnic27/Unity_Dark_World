@@ -90,6 +90,7 @@ public class GunSG : MonoBehaviour
         {
             ammo = 6;
             uiScript.ammoUI.text = "Ammo: " + ammo;
+            SoundManager.PlaySound("Reload");
         }
     }
 }

@@ -24,11 +24,15 @@ public class GameUI : MonoBehaviour
 
     public void DecreaseHealth()
     {
-        playerHealth -= 20;
-        healthUI.text = "Health: " + playerHealth + "%";
-
-        if(playerHealth <= 0)
+        if(playerHealth > 20)
         {
+            SoundManager.PlaySound("HitGrunt");
+            playerHealth -= 20;
+            healthUI.text = "Health: " + playerHealth + "%";
+        }
+        else
+        {
+            SoundManager.PlaySound("DeathGrunt");
             playerHealth = 0;
             healthUI.text = "Health: " + playerHealth + "%";
         }

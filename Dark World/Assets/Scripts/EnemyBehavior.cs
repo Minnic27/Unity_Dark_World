@@ -24,6 +24,7 @@ public class EnemyBehavior : MonoBehaviour
     public void ActivateAttack()
     {
         rightFist.GetComponent<Collider>().enabled = true;
+        SoundManager.PlaySound("DemonAttack");
     }
 
     public void DeactivateAttack()
