@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - Punch
   - spawnpoint
+  - PlayerManager
   layers:
   - Default
   - TransparentFX

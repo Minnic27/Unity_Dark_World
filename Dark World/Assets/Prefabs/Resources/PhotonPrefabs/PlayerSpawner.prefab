@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3999909879159089170}
   - component: {fileID: -5897299187683596407}
   m_Layer: 0
-  m_Name: PlayerManager
+  m_Name: PlayerSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -67,4 +67,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 0}
-  characterName: 

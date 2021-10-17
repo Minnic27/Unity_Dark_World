@@ -8,17 +8,15 @@ public class PlayerManager : MonoBehaviour
 {
     PhotonView PV;
     public Transform spawnPoint;
-    public string characterName;
+    
+    private CharacterSelection selectionScript;
 
     void Awake()
     {
         spawnPoint = GameObject.FindWithTag("spawnpoint").transform;
         PV = GetComponent<PhotonView>();
 
-        if(characterName == "")
-        {
-            characterName = "Kyrilios";
-        }
+        selectionScript = GameObject.FindObjectOfType<CharacterSelection>();
         
     }
    
@@ -32,6 +30,6 @@ public class PlayerManager : MonoBehaviour
 
     void CreateController()
     {
-        PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", characterName), spawnPoint.position, Quaternion.identity);
+        PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "Kyrilios"), spawnPoint.position, Quaternion.identity);
     }
 }

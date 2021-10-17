@@ -44,6 +44,8 @@ GameObject:
   - component: {fileID: 182004892833917875}
   - component: {fileID: 182004892833917868}
   - component: {fileID: 182004892833917869}
+  - component: {fileID: -6541588089513366040}
+  - component: {fileID: 7143166023848063723}
   m_Layer: 0
   m_Name: Kyrilios
   m_TagString: Player
@@ -140,10 +142,52 @@ MonoBehaviour:
   Synchronization: 3
   OwnershipTransfer: 0
   observableSearch: 2
-  ObservedComponents: []
+  ObservedComponents:
+  - {fileID: -6541588089513366040}
+  - {fileID: 7143166023848063723}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!114 &-6541588089513366040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 182004892833917870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b8c4a61274f60b4ea5fb4299cfdbf14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowLayerWeightsInspector: 1
+  ShowParameterInspector: 1
+  m_SynchronizeParameters:
+  - Type: 1
+    SynchronizeType: 0
+    Name: Movement
+  - Type: 3
+    SynchronizeType: 0
+    Name: Strafe
+  m_SynchronizeLayers:
+  - SynchronizeType: 0
+    LayerIndex: 0
+--- !u!114 &7143166023848063723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 182004892833917870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
+  m_UseLocal: 1
 --- !u!1 &190856816448674783
 GameObject:
   m_ObjectHideFlags: 0
@@ -2181,6 +2225,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8718666453696886196}
   - component: {fileID: 8718666453696886203}
+  - component: {fileID: 1975496569124198745}
+  - component: {fileID: 2398154939115685274}
   m_Layer: 0
   m_Name: BulletSpawn
   m_TagString: Untagged
@@ -2221,6 +2267,45 @@ MonoBehaviour:
   impactEffect: {fileID: 5383390966512558474, guid: 822308c7e41813042be86ee5a1f0f3f8, type: 3}
   tpsCam: {fileID: 8718666453480737312}
   playerScript: {fileID: 182004892833917868}
+--- !u!114 &1975496569124198745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8718666453696886197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents:
+  - {fileID: 2398154939115685274}
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!114 &2398154939115685274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8718666453696886197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
+  m_UseLocal: 1
 --- !u!1 &8718666453807266132
 GameObject:
   m_ObjectHideFlags: 0
@@ -2490,19 +2575,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5974520924060537078, guid: dd0e6b4f38dc8214991307ac68093f3a, type: 3}
       propertyPath: m_BoundingSphereOverride.w
-      value: 1e-45
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5974520924060537078, guid: dd0e6b4f38dc8214991307ac68093f3a, type: 3}
       propertyPath: m_BoundingSphereOverride.x
-      value: 0
+      value: 6.17e-43
       objectReference: {fileID: 0}
     - target: {fileID: 5974520924060537078, guid: dd0e6b4f38dc8214991307ac68093f3a, type: 3}
       propertyPath: m_BoundingSphereOverride.y
-      value: 0
+      value: -1.515497e-20
       objectReference: {fileID: 0}
     - target: {fileID: 5974520924060537078, guid: dd0e6b4f38dc8214991307ac68093f3a, type: 3}
       propertyPath: m_BoundingSphereOverride.z
-      value: 0
+      value: 6.15e-43
       objectReference: {fileID: 0}
     - target: {fileID: 5974520924281125185, guid: dd0e6b4f38dc8214991307ac68093f3a, type: 3}
       propertyPath: m_Name
@@ -2573,13 +2658,13 @@ PrefabInstance:
     - {fileID: 1546925832087079893, guid: dd0e6b4f38dc8214991307ac68093f3a, type: 3}
     - {fileID: 5549872267523742979, guid: dd0e6b4f38dc8214991307ac68093f3a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: dd0e6b4f38dc8214991307ac68093f3a, type: 3}
---- !u!198 &3032945455131095327 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 5974520924281125188, guid: dd0e6b4f38dc8214991307ac68093f3a, type: 3}
-  m_PrefabInstance: {fileID: 8718666453547698267}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3032945455131095325 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5974520924281125190, guid: dd0e6b4f38dc8214991307ac68093f3a, type: 3}
+  m_PrefabInstance: {fileID: 8718666453547698267}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &3032945455131095327 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5974520924281125188, guid: dd0e6b4f38dc8214991307ac68093f3a, type: 3}
   m_PrefabInstance: {fileID: 8718666453547698267}
   m_PrefabAsset: {fileID: 0}

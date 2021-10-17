@@ -2,20 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.IO;
 
 public class CharacterSelection : MonoBehaviour
 {
     public GameObject[] characters;
     public int selectedCharacter = 0;
-    
-    private PlayerManager pmScript;
 
-
-    void Start()
-    {
-        Debug.Log(characters[selectedCharacter].name);
-        pmScript = GameObject.FindObjectOfType<PlayerManager>();
-    }
+    public string characterName;
 
     public void NextCharacter()
     {
@@ -39,9 +33,6 @@ public class CharacterSelection : MonoBehaviour
 
     public void SelectCharacter()
     {
-        pmScript.characterName = characters[selectedCharacter].name;
-        //PlayerPrefs.SetInt("selectedCharacter", selectedCharacter);
-        //SceneManager.LoadScene("Neighborhood");
-        //Debug.Log(characterName);
+        characterName = characters[selectedCharacter].name;
     }
 }
