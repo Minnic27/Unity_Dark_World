@@ -76,6 +76,7 @@ public class EnemyBehavior : MonoBehaviour
         {
             anim.SetInteger("Attack", 0);
             anim.SetTrigger("Death");
+            //SoundManager.PlaySound("MonsterDeath");
             StartCoroutine(EnemyDie());
         }
         else if(isAttacking && (health <= 0))

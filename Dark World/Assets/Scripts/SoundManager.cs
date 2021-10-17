@@ -19,7 +19,7 @@ public class SoundManager : MonoBehaviour
         hitPlayer = Resources.Load<AudioClip>("HitGrunt");
         enemyAttack = Resources.Load<AudioClip>("DemonAttack");
         playerDead = Resources.Load<AudioClip>("DeathGrunt");
-        //enemyDead = Resources.Load<AudioClip>("DemonAttack");
+        enemyDead = Resources.Load<AudioClip>("MonsterDeath");
         reload = Resources.Load<AudioClip>("Reload");
 
         audioSrc = GetComponent<AudioSource>();
@@ -56,9 +56,9 @@ public class SoundManager : MonoBehaviour
             case "DeathGrunt":
                 audioSrc.PlayOneShot(playerDead);
                 break;
-            // case "AR1":
-            //     audioSrc.PlayOneShot(enemyDead);
-            //     break;
+            case "MonsterDeath":
+                audioSrc.PlayOneShot(enemyDead);
+                break;
             case "Reload":
                 audioSrc.PlayOneShot(reload);
                 break;
