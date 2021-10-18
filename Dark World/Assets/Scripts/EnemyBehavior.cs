@@ -45,7 +45,7 @@ public class EnemyBehavior : MonoBehaviour
         rightFist.GetComponent<Collider>().enabled = false;
     }
 
-
+    
     public void TakeDamage(int damageAmount)
     {
         health -= damageAmount;

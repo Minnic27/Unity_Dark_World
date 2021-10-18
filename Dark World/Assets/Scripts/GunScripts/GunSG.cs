@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 
-public class GunSG : MonoBehaviour
+public class GunSG : MonoBehaviourPunCallbacks
 {
     public int damage = 50;
     private float range = 100f;
@@ -37,8 +37,8 @@ public class GunSG : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!PV.IsMine)
-            return;
+        // if(!PV.IsMine)
+        //     return;
 
         if(Input.GetButtonDown("Fire1") && Time.time >= nextTimeToFire)
         {
@@ -52,14 +52,15 @@ public class GunSG : MonoBehaviour
                 }
                 else
                 {
-                    Shoot();
+                    //Shoot();
+                    photonView.RPC("Shoot", RpcTarget.All);
                 }
             }
         }
 
         GunReload();
     }
-
+    [PunRPC]
     void Shoot()
     {
                
