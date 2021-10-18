@@ -21,7 +21,7 @@ public class SpawnEnemy : MonoBehaviour
 
     void Start()
     {
-        spawnTime = Random.Range(5, 10);
+        spawnTime = Random.Range(3, 5);
 
         if(PV.IsMine)
         {
