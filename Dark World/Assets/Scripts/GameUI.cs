@@ -60,6 +60,6 @@ public class GameUI : MonoBehaviour
     {
         GameOver.timerScoreString = totalTime;
         yield return new WaitForSeconds(2f);
-        //SceneManager.LoadScene("GameOver");
+        SceneManager.LoadScene("GameOver");
     }
 }
