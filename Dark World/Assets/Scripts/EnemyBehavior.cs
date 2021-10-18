@@ -7,7 +7,7 @@ public class EnemyBehavior : MonoBehaviour
 {
     private int health = 100;
     public NavMeshAgent enemy;
-    private Transform player;
+    public GameObject[] players;
     public Animator anim;
     private float stoppingDistance = 1.8f;
     private bool isAttacking = false;
@@ -15,9 +15,14 @@ public class EnemyBehavior : MonoBehaviour
     private GameUI uiScript;
     public GameObject rightFist;
 
+    private float DistanceFromLastTarget;
+    private int MainTarget;
+    private float distance;
+    private float DistanceFromTarget;      
+
     void Start()
     {
-        player = GameObject.FindWithTag("Player").transform;
+        players = GameObject.FindGameObjectsWithTag("Player");
         uiScript = GameObject.FindObjectOfType<GameUI>();
     }
 
@@ -48,7 +53,32 @@ public class EnemyBehavior : MonoBehaviour
 
     private void FollowPlayer()
     {
-        float distance = Vector3.Distance(transform.position, player.position);
+        for (int i = 0; i < players.Length; i++)
+        //Target.size returns the size of the array//
+        {
+            if (players[i] != null)
+            //Makes sure it's following a living target, I recommend creating a boolean inside the target to check if it's dead or not and referecing it here//
+            {
+                distance = Vector3.Distance(transform.position, players[i].transform.position);
+    
+                if (i > 0)
+                //Never let a script try to grab info from a null element from an array/list, as this creates an error. This makes sure it doesn't take information from Target[-1]//
+                {
+                    DistanceFromLastTarget = Vector3.Distance (players[i - 1].transform.position, transform.position);
+                }
+                else
+                {
+                    DistanceFromLastTarget = 1.8f;
+                }
+    
+                if (DistanceFromTarget > DistanceFromLastTarget)
+                {
+                    MainTarget = i;
+                }
+            }
+        }
+        
+        //float distance = Vector3.Distance(transform.position, players[i].transform.position);
 
         if(distance < stoppingDistance)
         {
@@ -61,7 +91,7 @@ public class EnemyBehavior : MonoBehaviour
             isAttacking = false;
             enemy.isStopped = false;
             anim.SetInteger("Attack", -1);
-            enemy.SetDestination(player.position);
+            enemy.SetDestination(players[MainTarget].transform.position);
         }
 
         
@@ -70,6 +100,7 @@ public class EnemyBehavior : MonoBehaviour
 
     void Update()
     {
+
         FollowPlayer();
 
         if(health <= 0)

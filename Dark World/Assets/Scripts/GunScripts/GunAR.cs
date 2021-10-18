@@ -48,7 +48,7 @@ public class GunAR : MonoBehaviour
             {
                 if(ammo <= 0)
                 {
-                    uiScript.ammoUI.text = "Press 'R' to reload";
+                    uiScript.ammoUI.text = "'R' to Reload";
                 }
                 else
                 {
