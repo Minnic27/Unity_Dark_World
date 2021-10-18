@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using Photon.Pun;
 
 public class EnemyBehavior : MonoBehaviour
 {
@@ -18,7 +19,14 @@ public class EnemyBehavior : MonoBehaviour
     private float DistanceFromLastTarget;
     private int MainTarget;
     private float distance;
-    private float DistanceFromTarget;      
+    private float DistanceFromTarget;
+
+    PhotonView PV;
+
+    void Awake()
+    {
+        PV = GetComponent<PhotonView>();
+    }      
 
     void Start()
     {
@@ -100,6 +108,8 @@ public class EnemyBehavior : MonoBehaviour
 
     void Update()
     {
+        if(!PV.IsMine)
+            return;
 
         FollowPlayer();
 

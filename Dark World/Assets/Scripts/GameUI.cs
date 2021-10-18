@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Photon.Pun;
 
 public class GameUI : MonoBehaviour
 {
@@ -15,6 +16,13 @@ public class GameUI : MonoBehaviour
     private string minutes;
     private string seconds;
     private string totalTime;
+
+    PhotonView PV;
+
+    void Awake()
+    {
+        PV = GetComponent<PhotonView>();
+    } 
     
     // Start is called before the first frame update
     void Start()
@@ -53,6 +61,9 @@ public class GameUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(!PV.IsMine)
+            return;
+            
         UpdateTime();
     }
 
