@@ -8,13 +8,11 @@ public class CharacterSelection : MonoBehaviour
     public GameObject[] characters;
     private int selectedCharacter = 0;
 
-    //public GameObject objPrefab;
-    public static string charName;
+    public static string charName = "Kyrilios";
     public PlayerManager pmScript;
 
     void Start()
     {
-        //objPrefab = GameObject.FindGameObjectWithTag("PlayerManager");
         pmScript = GameObject.FindObjectOfType<PlayerManager>();
     }
 
