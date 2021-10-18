@@ -32,13 +32,14 @@ public class GunAR : MonoBehaviourPunCallbacks
     {
         uiScript = GameObject.FindObjectOfType<GameUI>();
         uiScript.ammoUI.text = ammo + "/20";
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        // if(!PV.IsMine)
-        //     return;
+        if(!PV.IsMine)
+            return;
 
         if(Input.GetButton("Fire1") && Time.time >= nextTimeToFire)
         {

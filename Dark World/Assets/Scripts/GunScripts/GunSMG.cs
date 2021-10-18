@@ -37,8 +37,8 @@ public class GunSMG : MonoBehaviourPunCallbacks
     // Update is called once per frame
     void Update()
     {
-        // if(!PV.IsMine)
-        //     return;
+        if(!PV.IsMine)
+            return;
 
         if(Input.GetButton("Fire1") && Time.time >= nextTimeToFire)
         {

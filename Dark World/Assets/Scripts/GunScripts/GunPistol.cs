@@ -37,8 +37,8 @@ public class GunPistol : MonoBehaviourPunCallbacks
     // Update is called once per frame
     void Update()
     {
-        // if(!PV.IsMine)
-        //     return;
+        if(!PV.IsMine)
+            return;
 
         if(Input.GetButtonDown("Fire1") && Time.time >= nextTimeToFire)
         {
