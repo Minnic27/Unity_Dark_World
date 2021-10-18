@@ -20,7 +20,7 @@ public class Launcher : MonoBehaviourPunCallbacks
     [SerializeField] GameObject PlayerListItemPrefab;
     [SerializeField] GameObject startGameButton;
 
-    private maxPlayers = 4;
+    private byte maxPlayers = 4;
     
 
     void Awake()
