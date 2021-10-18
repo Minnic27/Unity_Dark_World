@@ -20,7 +20,8 @@ public class Launcher : MonoBehaviourPunCallbacks
     [SerializeField] GameObject PlayerListItemPrefab;
     [SerializeField] GameObject startGameButton;
 
-    RoomOptions roomOptions = new RoomOptions();
+    private maxPlayers = 4;
+    
 
     void Awake()
     {
@@ -54,7 +55,8 @@ public class Launcher : MonoBehaviourPunCallbacks
             return;
         }
 
-        roomOptions.MaxPlayers = 4;
+        RoomOptions roomOptions = new RoomOptions();
+        roomOptions.MaxPlayers = maxPlayers;
 
         PhotonNetwork.CreateRoom(roomNameInputField.text);
         MenuManager.Instance.OpenMenu("loading");
