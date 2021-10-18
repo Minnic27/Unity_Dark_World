@@ -19,14 +19,14 @@ public class EnemyBehavior : MonoBehaviour
     private float DistanceFromLastTarget;
     private int MainTarget;
     private float distance;
-    private float DistanceFromTarget;
+    private float DistanceFromTarget;  
 
     PhotonView PV;
 
     void Awake()
     {
         PV = GetComponent<PhotonView>();
-    }      
+    }    
 
     void Start()
     {
