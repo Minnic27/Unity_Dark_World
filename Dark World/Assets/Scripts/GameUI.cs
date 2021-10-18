@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameUI : MonoBehaviour
 {
@@ -57,8 +58,8 @@ public class GameUI : MonoBehaviour
 
     IEnumerator DeathSequence()
     {
+        GameOver.timerScoreString = totalTime;
         yield return new WaitForSeconds(2f);
-        Debug.Log("Player is DEAD!");
-        Time.timeScale = 0;
+        //SceneManager.LoadScene("GameOver");
     }
 }
