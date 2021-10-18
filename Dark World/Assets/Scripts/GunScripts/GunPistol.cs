@@ -31,7 +31,7 @@ public class GunPistol : MonoBehaviour
     void Start()
     {
         uiScript = GameObject.FindObjectOfType<GameUI>();
-        uiScript.ammoUI.text = "Ammo: " + ammo;
+        uiScript.ammoUI.text = ammo + "/10";
     }
 
     // Update is called once per frame
@@ -80,7 +80,7 @@ public class GunPistol : MonoBehaviour
         GameObject bulletImpact = Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
         Destroy(bulletImpact, 0.5f);
         ammo--;
-        uiScript.ammoUI.text = "Ammo: " + ammo;
+        uiScript.ammoUI.text = ammo + "/10";
     }
 
     public void GunReload()
@@ -88,7 +88,7 @@ public class GunPistol : MonoBehaviour
         if ((Input.GetKey(KeyCode.R)) && (ammo == 0)) // checks if gun is out of ammo
         {
             ammo = 10;
-            uiScript.ammoUI.text = "Ammo: " + ammo;
+            uiScript.ammoUI.text = ammo + "/10";
             SoundManager.PlaySound("Reload");
         }
     }

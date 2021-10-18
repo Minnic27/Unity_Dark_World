@@ -20,7 +20,7 @@ public class GameUI : MonoBehaviour
     void Start()
     {
         startTime = Time.time;
-        healthUI.text = "Health: " + playerHealth + "%";
+        healthUI.text = "" + playerHealth + "%";
     }
 
     public void DecreaseHealth()
@@ -29,13 +29,13 @@ public class GameUI : MonoBehaviour
         {
             SoundManager.PlaySound("HitGrunt");
             playerHealth -= 20;
-            healthUI.text = "Health: " + playerHealth + "%";
+            healthUI.text = "" + playerHealth + "%";
         }
         else
         {
             SoundManager.PlaySound("DeathGrunt");
             playerHealth = 0;
-            healthUI.text = "Health: " + playerHealth + "%";
+            healthUI.text = "" + playerHealth + "%";
             StartCoroutine(DeathSequence());
         }
     }
@@ -46,7 +46,7 @@ public class GameUI : MonoBehaviour
 
         minutes = ((int) t / 60).ToString();
         seconds  = (t % 60).ToString("f1");
-        timerUI.text ="Time Survived: " + minutes + ":" + seconds;
+        timerUI.text ="" + minutes + ":" + seconds;
         totalTime = minutes + ":" + seconds;
     }
 
